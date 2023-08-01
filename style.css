@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: hsl(210, 10%, 62%);
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    background-color: #fff;
+    color: #000;
+}
+
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #292928;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 50px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav {
+    background-color: #000;
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+    gap: 4.5rem;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav img {
+    height: 4vw;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.8;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+
+#myBtn {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#arrow {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    position: absolute;
+    display: flex;
+    top: 710%;
+    left: 95%;
+    bottom: 2%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease-in-out 0.3s;
+}
+
+#arrow i {
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+#arrow:hover {
+    scale: 0.8;
+}
+
+#arrow:hover i {
+    background-color: transparent;
+    color: white;
+}
+
+.box {
+    display: block;
+    width: 280px;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    background: rgb(24, 24, 24);
+    text-align: center;
+
+}
+
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.text-input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+.text-input:focus {
+    width: 200px;
+    border-color: #55ec41;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 25px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #2ecc71;
+}
+
+.box .close-btn {
+    font-size: 1.2rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 13rem;
+}
+
+.box .close-btn:hover {
+    color: rgb(157, 121, 255);
+}
+
+.main,
+.loginMain,
+.aboutMain,
+.achievementsMain,
+.projectsMain {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.page1main {
+    display: flex;
+    flex-direction: row;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-left: 10rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    z-index: 10;
+}
+
+.page1 .hiThere h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.page1 h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h2 {
+    color: #a5a4a4;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.page1 p {
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 60%;
+}
+
+.page1 .cvBtn {
+    cursor: pointer;
+    width: 6.5rem;
+    height: 3.5rem;
+    margin-top: 1.5rem;
+    color: white;
+    background-color: rgb(59, 59, 59);
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+.page1 .cvBtn:hover {
+    scale: 1.1;
+    color: black;
+    background-color: white;
+    border: none;
+}
+
+.circle-face {
+    display: inline-block;
+    border: 0.4rem solid #ffffff;
+    border-radius: 50%;
+    width: 17rem;
+    height: 17rem;
+    margin-top: 18rem;
+    margin-right: 18rem;
+    transition: all .2s ease-in-out;
+}
+
+.circle-face>* {
+    display: inline-block;
+    width: 16.6rem;
+    height: 60rem;
+    margin-top: -43.9rem;
+    background: none no-repeat center bottom / 26rem 35rem;
+    border-radius: 0 0 10rem 10rem;
+}
+
+.circle-face:hover {
+    scale: 1.2;
+}
+
+#page2 {
+    width: 100%;
+    z-index: 10;
+    margin-bottom: 2rem;
+}
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    background-color: rgba(241, 239, 239, 0.055);
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 7rem;
+    font-weight: 900;
+    font-family: 'Lilita One', cursive;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: #818181;
+}
+
+#scroller h4:hover {
+    color: #ffffff;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#about-us {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+}
+
+#about-us img {
+    height: 220px;
+    width: 220px;
+    border-radius: 30px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+#about-us img:hover {
+    scale: 1.2;
+}
+
+#about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+#about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#cards-container {
+    background-color: rgba(105, 104, 104, 0.089);
+    margin-top: 5rem;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    cursor: pointer;
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+#card1 {
+    background-image: url(images/img5.jpg);
+}
+
+#card2 {
+    background-image: url(images/img4.jpg);
+}
+
+#card3 {
+    background-image: url(images/img3.jpg);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #161616;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4 {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.overlay h5 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+}
+
+.overlay p {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    /* transform: rotate3d(-0.5, 0.5, 0, 20deg); */
+    scale: 1.1;
+    transition: 0.3s ease-in;
+}
+
+.signUpDiv {
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.signUpDiv h4 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.signUpDiv .loginBtn {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: rgb(59, 59, 59);
+    border: none;
+    border-radius: 30px;
+    border-width: 3px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.signUpDiv .loginBtn:hover {
+    scale: 1.1;
+    background-color: white;
+    color: black;
+}
+
+.signUpDiv .loginBtn a {
+    color: white;
+    text-decoration: none;
+}
+
+.signUpDiv .loginBtn a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#page4 {
+    background-color: rgba(105, 104, 104, 0.089);
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+#page4 a {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+#page4 .elem h2 {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(198, 129, 255);
+    display: flex;
+    color: #000;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    font-size: 2vw;
+    position: absolute;
+    z-index: 10;
+}
+
+#page4 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    scale: 1;
+}
+
+#page4 .elem:hover h2 {
+    color: white;
+    background-color: transparent;
+}
+
+#page4 .elem:hover img {
+    scale: 1.1;
+}
+
+#page4 h1 {
+    font-size: 6.4vw;
+    position: absolute;
+    top: -55%;
+    font-weight: 900;
+    font-family: gilroy;
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+}
+
+#footer {
+    height: 30vh;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.199);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+    gap: 10rem;
+}
+
+#f1 img {
+    height: 100px;
+}
+
+#f1,
+#f2,
+#f3,
+#f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+}
+
+#f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: rgb(150, 150, 150);
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+#f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: rgb(150, 150, 150);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+#f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: rgb(150, 150, 150);
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.credits {
+    background-color: rgba(128, 128, 128, 0.199);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.credits p {
+    color: rgb(150, 150, 150);
+}
+
+.aboutPage1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.aboutPage1 h1 {
+    font-size: 10rem;
+    color: white;
+}
+.achievementsPage1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.achievementsPage1 h1 {
+    font-size: 10rem;
+    color: white;
+}
+.projectsPage1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.projectsPage1 h1 {
+    font-size: 10rem;
+    color: white;
+}

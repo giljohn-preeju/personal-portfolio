@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="images/logo.png" width="70rem">
+        <a href="index.html" class="nav-link nav-link-ltr">
+            <h4>Home</h4>
+        </a>
+        <a href="about.html" class="nav-link nav-link-ltr">
+            <h4>About</h4>
+        </a>
+        <a href="projects.html" class="nav-link nav-link-ltr">
+            <h4>Projects</h4>
+        </a>
+        <a href="achievements.html" class="nav-link nav-link-ltr">
+            <h4>Achievements</h4>
+        </a>
+        <a href="login.html" class="nav-link nav-link-ltr">
+            <h4>Contact</h4>
+        </a>
+        <div id="arrow">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ri-arrow-up-line"
+                    onclick="topFunction()"></i></button>
+        </div>
+    </div>
+    <div class="loginMain">
+        <form class="box" id="loginBox">
+            <button class="close-btn" onclick="closeLogin()"><i class="fa-solid fa-xmark"
+                    style="color: #ffffff;"></i></button>
+            <h1>LogIn</h1>
+            <input type="text" name="" placeholder="Username" class="text-input">
+            <input type="password" name="" placeholder="Password" class="text-input">
+            <input type="submit" name="" value="Login" onclick="closeLogin()">
+        </form>
+    </div>
+</body>
+
+</html>
